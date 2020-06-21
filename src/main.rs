@@ -9,7 +9,7 @@ fn main() {
     let config: Config = envy::prefixed("MSHP_").from_env().unwrap();
 
     let mut items = Vec::new();
-    items.push(config.cwd_color.paint(get_working_directory()));
+    items.push(config.path_color.paint(get_working_directory()));
 
     if !config.git_branch_disable {
         if let Some(git_branch) = GitBranch::from_env() {
@@ -22,19 +22,19 @@ fn main() {
         if let Some(git_status) = GitStatus::from_env() {
             let mut output = String::new();
             if git_status.staged > 0 {
-                output.push_str(&config.git_staged_icon);
+                output.push_str(&config.git_status_staged_icon);
             }
             if git_status.unstaged > 0 {
-                output.push_str(&config.git_unstaged_icon);
+                output.push_str(&config.git_status_unstaged_icon);
             }
             if git_status.untracked > 0 {
-                output.push_str(&config.git_untracked_icon);
+                output.push_str(&config.git_status_untracked_icon);
             }
             if git_status.ahead > 0 {
-                output.push_str(&config.git_ahead_icon);
+                output.push_str(&config.git_status_ahead_icon);
             }
             if git_status.behind > 0 {
-                output.push_str(&config.git_behind_icon);
+                output.push_str(&config.git_status_behind_icon);
             }
             if !output.is_empty() {
                 items.push(config.git_status_color.paint(output));
