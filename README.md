@@ -1,9 +1,8 @@
 # mshp
 
-[![Build](https://img.shields.io/github/workflow/status/yuqio/mshp/CI)](https://github.com/yuqio/mshp/actions)
-[![Crate](https://img.shields.io/crates/v/mshp)](https://crates.io/crates/mshp)
-[![Version](https://img.shields.io/github/v/release/yuqio/mshp?color=orange)](https://github.com/yuqio/mshp/releases)
-[![License](https://img.shields.io/crates/l/mshp?color=yellow)](https://github.com/yuqio/mshp#license)
+[![Build](https://img.shields.io/github/workflow/status/yuqio/mshp/CI?labelColor=4c566a&color=a3be8c&logo=github)](https://github.com/yuqio/mshp/actions)
+[![Crate](https://img.shields.io/crates/v/mshp?labelColor=4c566a&color=81a1c1&logo=rust)](https://crates.io/crates/mshp)
+[![License](https://img.shields.io/crates/l/mshp?labelColor=4c566a&color=b48ead)](https://github.com/yuqio/mshp#license)
 
 <img width="50%" align="right" src="screenshot.png" />
 
