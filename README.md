@@ -1,7 +1,7 @@
 # mshp
 
 [![Build](https://img.shields.io/github/workflow/status/yuqio/mshp/CI)](https://github.com/yuqio/mshp/actions)
-[![Crate](https://img.shields.io/crates/v/mshp)](https://crates.io/crates/huelib)
+[![Crate](https://img.shields.io/crates/v/mshp)](https://crates.io/crates/mshp)
 [![Version](https://img.shields.io/github/v/release/yuqio/mshp?color=orange)](https://github.com/yuqio/mshp/releases)
 [![License](https://img.shields.io/crates/l/mshp?color=yellow)](https://github.com/yuqio/mshp#license)
 
