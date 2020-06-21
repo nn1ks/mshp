@@ -74,9 +74,9 @@ end
 
 ### Available environment variables
 
-- **`MSHP_CWD_COLOR`**
+- **`MSHP_PATH_COLOR`**
 
-    Sets the foreground color used to display the current working directory.
+    Sets the foreground color of the current working directory.
 
     Type: `Color`, Default: `blue`
 

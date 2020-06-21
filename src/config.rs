@@ -6,7 +6,7 @@ use yansi::Color;
 #[serde(default)]
 pub struct Config {
     #[serde(deserialize_with = "deserialize_color")]
-    pub cwd_color: Color,
+    pub path_color: Color,
     pub git_branch_icon: String,
     #[serde(deserialize_with = "deserialize_color")]
     pub git_branch_color: Color,
@@ -32,7 +32,7 @@ pub struct Config {
 impl Default for Config {
     fn default() -> Self {
         Self {
-            cwd_color: Color::Blue,
+            path_color: Color::Blue,
             git_branch_icon: "".to_owned(),
             git_branch_color: Color::Cyan,
             git_branch_disable: false,
