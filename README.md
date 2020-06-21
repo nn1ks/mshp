@@ -98,31 +98,31 @@ end
 
     Type: `Boolean`, Default: `0`
 
-- **`MSHP_GIT_STAGED_ICON`**
+- **`MSHP_GIT_STATUS_STAGED_ICON`**
 
     Sets the icon that is used to indicate uncommited and staged changes in the git repo.
 
     Type: `String`, Default: `+`
 
-- **`MSHP_GIT_UNSTAGED_ICON`**
+- **`MSHP_GIT_STATUS_UNSTAGED_ICON`**
 
     Sets the icon that is used to indicate uncommited and unstaged changes in the git repo.
 
     Type: `String`, Default: `!`
 
-- **`MSHP_GIT_UNTRACKED_ICON`**
+- **`MSHP_GIT_STATUS_UNTRACKED_ICON`**
 
     Sets the icon that is used to indicate untracked files in the git repo.
 
     Type: `String`, Default: `!`
 
-- **`MSHP_GIT_AHEAD_ICON`**
+- **`MSHP_GIT_STATUS_AHEAD_ICON`**
 
     Sets the icon that is used to indicate that your local branch is ahead of the upstream branch.
 
     Type: `String`, Default: `↥`
 
-- **`MSHP_GIT_BEHIND_ICON`**
+- **`MSHP_GIT_STATUS_BEHIND_ICON`**
 
     Sets the icon that is used to indicate that your local branch is behind the upstream branch.
 
