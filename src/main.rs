@@ -11,12 +11,14 @@ fn main() {
     let mut items = Vec::new();
     items.push(config.cwd_color.paint(get_working_directory()));
 
-    if !config.disable_git {
+    if !config.git_branch_disable {
         if let Some(git_branch) = GitBranch::from_env() {
             let output = format!("{} {}", config.git_branch_icon, git_branch.name());
             items.push(config.git_branch_color.paint(output));
         }
+    }
 
+    if !config.git_status_disable {
         if let Some(git_status) = GitStatus::from_env() {
             let mut output = String::new();
             if git_status.staged > 0 {
