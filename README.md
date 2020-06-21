@@ -59,71 +59,112 @@ end
 
 `mshp` can be configured via environment variables.
 
-### Color strings
+### Variable types
 
-Variables ending with `_COLOR` take a string as value that can be one of the following:
+- **`Color`**: Takes one of the following as value:
 
-- `default` or empty (sets the color to the default foreground color defined by the terminal)
-- A written out ANSII color (`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`)
-- A ANSII number (e.g. `1` for red)
-- A hex color beginning with `#` (e.g. `#00F` or `#0000FF` for blue)
+    - `default` or empty (sets the color to the default foreground color defined by the terminal)
+    - A written out ANSII color (`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`)
+    - A ANSII number (e.g. `1` for red)
+    - A hex color beginning with `#` (e.g. `#00F` or `#0000FF` for blue)
 
-### Available settings
+- **`Boolean`**: Takes either `0` (deactivate setting) or `1` (activate setting) as value
 
-The following environment variables are available:
+- **`String`**: Takes any value
 
-> Note: The values represent the default values that are used if the environment variable is not set
+### Available environment variables
 
-```sh
-# Sets the foreground color used to display the current working directory.
-MSHP_CWD_COLOR="blue"
+- **`MSHP_CWD_COLOR`**
 
-# Sets the icon that is displayed next to the git branch name.
-MSHP_GIT_BRANCH_ICON=""
+    Sets the foreground color used to display the current working directory.
 
-# Sets the foreground color used to displaye the git branch name and the icon.
-MSHP_GIT_BRANCH_COLOR="cyan"
+    Type: `Color`, Default: `blue`
 
-# Disables the git branch name and icon.
-# 
-# The value `1` will activate this setting.
-MSHP_GIT_BRANCH_DISABLE=0
+- **`MSHP_GIT_BRANCH_ICON`**
 
-# Sets the icon that is used to indicate uncommited and staged changes in the git repo.
-MSHP_GIT_STAGED_ICON="+"
+    Sets the icon that is displayed next to the git branch.
 
-# Sets the icon that is used to indicate uncommited and unstaged changes in the git repo.
-MSHP_GIT_UNSTAGED_ICON="!"
+    Type: `String`, Default: ``
 
-# Sets the icon that is used to indicate untracked files in the git repo.
-MSHP_GIT_UNTRACKED_ICON="?"
+- **`MSHP_GIT_BRANCH_COLOR`**
 
-# Sets the icon that is used to indicate that your local branch is ahead of  the upstream branch.
-MSHP_GIT_AHEAD_ICON="↥"
+    Sets the foreground color used to display the git branch and the icon.
 
-# Sets the icon that is used to indicate that your local branch is behind the upstream branch.
-MSHP_GIT_BEHIND_ICON="↧"
+    Type: `Color`, Default: `cyan`
 
-# Sets the colors for the above mentioned icons.
-MSHP_GIT_STATUS_COLOR="cyan"
+- **`MSHP_GIT_BRANCH_DISABLE`**
 
-# Disables the above mentioned icons.
-#
-# The value `1` will activate this setting.
-MSHP_GIT_STATUS_DISABLE=0
+    Disables the git branch and icon.
 
-# Sets the icon that is displayed at the end of the prompt to indicate that the currnet user is not the root user.
-MSHP_USER_INDICATOR="$"
+    Type: `Boolean`, Default: `0`
 
-# Sets the color for the user indicator icon.
-MSHP_ROOT_INDICATOR_COLOR="green"
+- **`MSHP_GIT_STAGED_ICON`**
 
-# Sets the icon that is displayed at the end of the prompt to indicate that the currnet user is the root user.
-MSHP_ROOT_INDICATOR="#"
+    Sets the icon that is used to indicate uncommited and staged changes in the git repo.
 
-# Sets the color for the root indicator icon.
-MSHP_ROOT_INDICATOR_COLOR="green"
-```
+    Type: `String`, Default: `+`
+
+- **`MSHP_GIT_UNSTAGED_ICON`**
+
+    Sets the icon that is used to indicate uncommited and unstaged changes in the git repo.
+
+    Type: `String`, Default: `!`
+
+- **`MSHP_GIT_UNTRACKED_ICON`**
+
+    Sets the icon that is used to indicate untracked files in the git repo.
+
+    Type: `String`, Default: `!`
+
+- **`MSHP_GIT_AHEAD_ICON`**
+
+    Sets the icon that is used to indicate that your local branch is ahead of the upstream branch.
+
+    Type: `String`, Default: `↥`
+
+- **`MSHP_GIT_BEHIND_ICON`**
+
+    Sets the icon that is used to indicate that your local branch is behind the upstream branch.
+
+    Type: `String`, Default: `↧`
+
+- **`MSHP_GIT_STATUS_COLOR`**
+
+    Sets the color for the above mentioned icons.
+
+    Type: `Color`, Default: `cyan`
+
+- **`MSHP_GIT_STATUS_DISABLE`**
+
+    Disables the above mentioned icons.
+
+    Type: `Boolean`, Default: `0`
+
+- **`MSHP_USER_INDICATOR`**
+
+    Sets the icon that is displayed at the end of the prompt to indicate that the current user is
+    not the root user.
+
+    Type: `String`, Default: `$`
+
+- **`MSHP_USER_INDICATOR_COLOR`**
+
+    Sets the color for the user indicator icon.
+
+    Type: `Color`, Default: `green`
+
+- **`MSHP_ROOT_INDICATOR`**
+
+    Sets the icon that is displayed at the end of the prompt to indicate that the current user is
+    the root user.
+
+    Type: `String`, Default: `#`
+
+- **`MSHP_ROOT_INDICATOR_COLOR`**
+
+    Sets the color for the root indicator icon.
+
+    Type: `Color`, Default: `green`
 
 ## License
 
