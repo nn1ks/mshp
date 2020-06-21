@@ -7,8 +7,6 @@ use yansi::Color;
 pub struct Config {
     #[serde(deserialize_with = "deserialize_color")]
     pub cwd_color: Color,
-    // #[serde(deserialize_with = "deserialize_bool")]
-    // pub disable_git: bool,
     pub git_branch_icon: String,
     #[serde(deserialize_with = "deserialize_color")]
     pub git_branch_color: Color,
