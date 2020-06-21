@@ -32,7 +32,7 @@
 On most POSIX compatible shells you can add the following line to your init file (e.g. `.bashrc`):
 
 ```sh
-PS="$(mshp)"
+PS1="$(mshp)"
 ```
 
 ### Zsh
