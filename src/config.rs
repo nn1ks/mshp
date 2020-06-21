@@ -95,8 +95,8 @@ fn deserialize_color<'de, D: Deserializer<'de>>(deserializer: D) -> Result<Color
                 Ok(Color::Fixed(string.parse().map_err(D::Error::custom)?))
             } else {
                 let expected = format!(
-                    "expected a hex color beginning with `#` or one of `unset`, `default`, {}",
-                    "`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`"
+                    "expected a hex color beginning with `#`, a ANSII number, an empty string, or one of {}",
+                    "`default`, black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`"
                 );
                 Err(D::Error::invalid_value(
                     Unexpected::Str(&string),
