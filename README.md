@@ -67,7 +67,7 @@ end
     - A ANSII number (e.g. `1` for red)
     - A hex color beginning with `#` (e.g. `#00F` or `#0000FF` for blue)
 
-- **`Boolean`**: Takes either `0` (deactivate setting) or `1` (activate setting) as value
+- **`Boolean`**: Takes either `0`/`false` (deactivate setting) or `1`/`true` (activate setting) as value
 
 - **`String`**: Takes any value
 
@@ -95,7 +95,7 @@ end
 
     Disables the git branch and icon.
 
-    Type: `Boolean`, Default: `0`
+    Type: `Boolean`, Default: `false`
 
 - **`MSHP_GIT_STATUS_STAGED_ICON`**
 
@@ -137,7 +137,7 @@ end
 
     Disables the above mentioned icons.
 
-    Type: `Boolean`, Default: `0`
+    Type: `Boolean`, Default: `false`
 
 - **`MSHP_USER_INDICATOR`**
 

@@ -53,10 +53,14 @@ impl Default for Config {
 
 fn deserialize_bool<'de, D: Deserializer<'de>>(deserializer: D) -> Result<bool, D::Error> {
     let string = String::deserialize(deserializer)?;
-    Ok(match string.as_ref() {
-        "1" => true,
-        _ => false,
-    })
+    match string.as_ref() {
+        "0" | "false" => Ok(false),
+        "1" | "true" => Ok(true),
+        other => Err(D::Error::invalid_value(
+            Unexpected::Str(other),
+            &"either `0`, `false`, `1`, or `true`",
+        )),
+    }
 }
 
 fn deserialize_color<'de, D: Deserializer<'de>>(deserializer: D) -> Result<Color, D::Error> {
