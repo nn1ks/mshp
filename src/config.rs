@@ -21,12 +21,18 @@ pub struct Config {
     pub git_status_color: Color,
     #[serde(deserialize_with = "deserialize_bool")]
     pub git_status_disable: bool,
-    pub user_indicator: String,
+    pub char_user_icon: String,
     #[serde(deserialize_with = "deserialize_color")]
-    pub user_indicator_color: Color,
-    pub root_indicator: String,
+    pub char_user_color: Color,
+    pub char_user_failed_icon: String,
     #[serde(deserialize_with = "deserialize_color")]
-    pub root_indicator_color: Color,
+    pub char_user_failed_color: Color,
+    pub char_root_icon: String,
+    #[serde(deserialize_with = "deserialize_color")]
+    pub char_root_color: Color,
+    pub char_root_failed_icon: String,
+    #[serde(deserialize_with = "deserialize_color")]
+    pub char_root_failed_color: Color,
 }
 
 impl Default for Config {
@@ -43,10 +49,14 @@ impl Default for Config {
             git_status_behind_icon: "↧".to_owned(),
             git_status_color: Color::Cyan,
             git_status_disable: false,
-            user_indicator: "$".to_owned(),
-            user_indicator_color: Color::Green,
-            root_indicator: "#".to_owned(),
-            root_indicator_color: Color::Green,
+            char_user_icon: "$".to_owned(),
+            char_user_color: Color::Green,
+            char_user_failed_icon: "$".to_owned(),
+            char_user_failed_color: Color::Red,
+            char_root_icon: "#".to_owned(),
+            char_root_color: Color::Green,
+            char_root_failed_icon: "#".to_owned(),
+            char_root_failed_color: Color::Red,
         }
     }
 }

@@ -43,10 +43,26 @@ fn main() {
     }
 
     let euid = unsafe { libc::geteuid() };
-    items.push(match euid {
-        0 => config.root_indicator_color.paint(config.root_indicator),
-        _ => config.user_indicator_color.paint(config.user_indicator),
-    });
+    let last_status_is_ok = match env::var("MSHP_LAST_STATUS") {
+        Ok(status) => status == "0",
+        Err(_) => true,
+    };
+    let char = if last_status_is_ok {
+        match euid {
+            0 => config.char_root_color.paint(config.char_root_icon),
+            _ => config.char_user_color.paint(config.char_user_icon),
+        }
+    } else {
+        match euid {
+            0 => config
+                .char_root_failed_color
+                .paint(config.char_root_failed_icon),
+            _ => config
+                .char_user_failed_color
+                .paint(config.char_user_failed_icon),
+        }
+    };
+    items.push(char);
 
     let mut output = String::new();
     for item in items {

@@ -139,31 +139,57 @@ end
 
     Type: `Boolean`, Default: `false`
 
-- **`MSHP_USER_INDICATOR`**
+- **`MSHP_CHAR_USER_ICON`**
 
     Sets the icon that is displayed at the end of the prompt to indicate that the current user is
     not the root user.
 
     Type: `String`, Default: `$`
 
-- **`MSHP_USER_INDICATOR_COLOR`**
+- **`MSHP_CHAR_USER_COLOR`**
 
-    Sets the color for the user indicator icon.
+    Sets the color for the user character.
 
     Type: `Color`, Default: `green`
 
-- **`MSHP_ROOT_INDICATOR`**
+- **`MSHP_CHAR_USER_FAILED_ICON`**
+
+    Sets the icon that is displayed at the end of the prompt to indicate that the current user is
+    not the root user when the previous command failed.
+
+    Type: `String`, Default: `$`
+
+- **`MSHP_CHAR_USER_FAILED_COLOR`**
+
+    Sets the color for the user character when the previous command failed.
+
+    Type: `Color`, Default: `red`
+
+- **`MSHP_CHAR_ROOT_ICON`**
 
     Sets the icon that is displayed at the end of the prompt to indicate that the current user is
     the root user.
 
     Type: `String`, Default: `#`
 
-- **`MSHP_ROOT_INDICATOR_COLOR`**
+- **`MSHP_CHAR_ROOT_COLOR`**
 
-    Sets the color for the root indicator icon.
+    Sets the color for the root character.
 
     Type: `Color`, Default: `green`
+
+- **`MSHP_CHAR_ROOT_FAILED_ICON`**
+
+    Sets the icon that is displayed at the end of the prompt to indicate that the current user is
+    the root user when the previous command failed.
+
+    Type: `String`, Default: `#`
+
+- **`MSHP_CHAR_ROOT_FAILED_COLOR`**
+
+    Sets the color for the root character when the previous command failed.
+
+    Type: `Color`, Default: `red`
 
 ## License
 
