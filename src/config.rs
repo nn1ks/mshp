@@ -88,14 +88,14 @@ fn deserialize_color<'de, D: Deserializer<'de>>(deserializer: D) -> Result<Color
                     }
                     _ => Err(D::Error::invalid_value(
                         Unexpected::Str(&string),
-                        &"expected a string with 4 or 7 characters including the `#`",
+                        &"a string with 4 or 7 characters including the `#`",
                     )),
                 }
             } else if string.chars().all(|c| c.is_numeric()) {
                 Ok(Color::Fixed(string.parse().map_err(D::Error::custom)?))
             } else {
                 let expected = format!(
-                    "expected a hex color beginning with `#`, a ANSII number, an empty string, or one of {}",
+                    "a hex color beginning with `#`, a ANSII number, an empty string, or one of {}",
                     "`default`, black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`"
                 );
                 Err(D::Error::invalid_value(
