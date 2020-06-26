@@ -4,13 +4,9 @@
 [![Crate](https://img.shields.io/crates/v/mshp?labelColor=4c566a&color=81a1c1&logo=rust)](https://crates.io/crates/mshp)
 [![License](https://img.shields.io/crates/l/mshp?labelColor=4c566a&color=b48ead)](https://github.com/yuqio/mshp#license)
 
-<img width="50%" align="right" src="screenshot.png" />
-
 **A minimal and fast shell prompt written in Rust.**
 
-- **Fast:** 🚀
-- **Universal:** Works on any shell, on any operating system
-- **Easy-to-hack:** Very easy to add a feature or change a behaviour due to the minimal codebase
+![screenshot](screenshot.png)
 
 ## Installation
 
@@ -62,8 +58,8 @@ end
 
 - **`Color`**: Takes one of the following as value:
 
-    - `default` or empty (sets the color to the default foreground color defined by the terminal)
-    - A written out ANSII color (`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`)
+    - `default` _(case insensitive)_ (sets the color to the default foreground color defined by the terminal)
+    - A written out ANSII color (`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`) _(case insensitive)_
     - A ANSII number (e.g. `1` for red)
     - A hex color beginning with `#` (e.g. `#00F` or `#0000FF` for blue)
 
