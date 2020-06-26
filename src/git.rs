@@ -8,7 +8,7 @@ pub struct GitBranch {
 }
 
 impl GitBranch {
-    /// Builds an [`GitBranch`] from the environment.
+    /// Builds a [`GitBranch`] from the environment.
     pub fn from_env() -> Option<Self> {
         let repo = Repository::discover(env::current_dir().ok()?).ok()?;
         let head_branch_name = match repo.head() {
