@@ -66,7 +66,7 @@ fn deserialize_bool<'de, D: Deserializer<'de>>(deserializer: D) -> Result<bool, 
 fn deserialize_color<'de, D: Deserializer<'de>>(deserializer: D) -> Result<Color, D::Error> {
     let string = String::deserialize(deserializer)?;
     match string.to_lowercase().as_ref() {
-        "default" | "" => Ok(Color::Default),
+        "default" => Ok(Color::Default),
         "black" => Ok(Color::Black),
         "red" => Ok(Color::Red),
         "green" => Ok(Color::Green),
